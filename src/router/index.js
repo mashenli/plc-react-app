@@ -1,16 +1,14 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import Layout from '../views/layout/index';
-import Login from '../views/login/index';
-// import AuthRouter from '@/views/auth/AuthRouter';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Index from '../page/index/index';
 const Router = () => {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Switch>
-                <Route component={Login} exact path="/login" />
-                <Route component={Layout} exact path="/" />
+                {/* <Route component={Login} exact path="/login" /> */}
+                <Route component={Index} exact path="/" />
             </Switch>
-        </HashRouter>
+        </BrowserRouter>
     );
 };
 
