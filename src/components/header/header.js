@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 // import Header from '../../components/header'
 import './header.css'
+import {
+    Link
+} from 'react-router-dom'
 class Header extends Component {
     render() {
         return (
@@ -8,16 +11,27 @@ class Header extends Component {
                 <div className="header-left">
                     <div className="header-left-icon">HCUEEN</div>
                     <div className="header-left-item">
-                        <div className="menu">123</div>
-                        <div className="menu">123</div>
-                        <div className="menu">123</div>
-                        <div className="menu">123</div>
-                        <div className="menu">123</div>
+                        <Link className="link" to="/">
+                            <div className="menu">首页</div>
+                        </Link>
+                        <Link className="link" to="/product">
+                            <div className="menu">产品</div>
+                        </Link>
+                        <Link className="link" to="/collect">
+                            <div className="menu">收藏夹</div>
+                        </Link>
+                        <Link className="link" to="/personal">
+                            <div className="menu">个人中心</div>
+                        </Link>
                     </div>
                 </div>
                 <div className="header-right">
-                    <div className="header-right-item">登录</div>
-                    <div className="header-right-item">注册</div>
+                    <Link className="link">
+                        <div className="header-right-item">注册</div>
+                    </Link>
+                    <Link className="link">
+                        <div className="header-right-item login">登录</div>
+                    </Link>
                 </div>
             </div>
         );
