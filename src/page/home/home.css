@@ -1,18 +1,6 @@
-.body {
-    width: 100%;
-    margin: 0 auto;
-    /* overflow: hidden; */
-}
-
-.carous {
-    width: 100%;
-    height: 700px;
-    background-color: dimgrey;
-    margin: 0 auto;
-    margin-top: 30px;
-}
-
-/* .content {
+.content {
+    /* margin-top: 60px; */
+    /* background-color: lightslategrey; */
     width: 80%;
     height: 500px;
     margin: 0 auto;
@@ -45,14 +33,12 @@
 
 .products-detail {}
 
-.about {
+.about{
     margin-top: 30px;
+    /* padding-top: 30px; */
+    /* position: relative; */
 }
 
-.content-about {} */
-
-.footer {
-    margin-top: 30px;
-    height: 60px;
-    width: 100%;
+.content-about {
+    /* float: right; */
 }

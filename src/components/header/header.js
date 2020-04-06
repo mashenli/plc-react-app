@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import Header from '../../components/header'
 import './header.css'
 import {
-    Link
+    Link,
+    withRouter
 } from 'react-router-dom'
 class Header extends Component {
     render() {
@@ -37,4 +38,4 @@ class Header extends Component {
         );
     }
 }
-export default Header;
+export default withRouter(Header);

@@ -4,11 +4,11 @@ import Index from '../page/index/index';
 const Router = () => {
     return (
         <BrowserRouter>
-            <Switch>
+              {/* <Switch>  */}
                 {/* <Route component={Login} exact path="/login" /> */}
                 <Route component={Index} exact path="/" />
-            </Switch>
-        </BrowserRouter>
+              {/* </Switch>  */}
+         </BrowserRouter>
     );
 };
 
