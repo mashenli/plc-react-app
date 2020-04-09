@@ -27,10 +27,10 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className="header-right">
-                    <Link className="link">
+                    <Link className="link" to="/register">
                         <div className="header-right-item">注册</div>
                     </Link>
-                    <Link className="link">
+                    <Link className="link" to="/login">
                         <div className="header-right-item login">登录</div>
                     </Link>
                 </div>

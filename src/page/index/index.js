@@ -4,13 +4,15 @@ import React, { Component } from 'react';
 import Header from '../../components/header/header'
 import Home from '../home/home'
 import Collect from '../collect/collect'
+import Product from '../product/product'
+import Personal from '../personal/personal';
 import './index.css'
 import { Layout } from 'antd';
 import {
     // BrowserRouter as Router,
     Route,
     Switch,
-    Link
+    // Link
 } from 'react-router-dom'
 const { Content } = Layout;
 class Index extends Component {
@@ -18,16 +20,16 @@ class Index extends Component {
         return (
             <div className="body">
                 <Header></Header>
-                <img src={require('../../assets/img/banner.jpg')} className="carous"></img>
                 <Layout>
                     <Content>
                         <Switch>
                             <Route path='/' exact component={Home}></Route>
                             <Route path='/collect' exact component={Collect}></Route>
+                            <Route path='/product' exact component={Product}></Route>
+                            <Route path='/personal' exact component={Personal}></Route>
                         </Switch>
                     </Content>
                 </Layout>
-                {/* <Home></Home> */}
             </div>
         );
     }

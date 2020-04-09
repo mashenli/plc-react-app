@@ -8,49 +8,50 @@ import './home.css'
 class Home extends Component {
     render() {
         return (
-                <div className="content">
-                    <div className="content-head">| 汇晨PLC |</div>
-                    <div className="content-products">
-                        <div className="content-products-item">
-                            <img className="products-img"></img>
-                            <div className="products-detail">
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                            </div>
-                        </div>
-                        <div className="content-products-item">
-                            <img className="products-img"></img>
-                            <div className="products-detail">
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                            </div>
-                        </div>
-                        <div className="content-products-item">
-                            <img className="products-img"></img>
-                            <div className="products-detail">
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                            </div>
+            <div className="content">
+                <img src={require('../../assets/img/banner.jpg')} className="carous"></img>
+                <div className="content-head">| 汇晨PLC |</div>
+                <div className="content-products">
+                    <div className="content-products-item">
+                        <img className="products-img"></img>
+                        <div className="products-detail">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
                         </div>
                     </div>
-                    <div className="content-head about">| 关于汇晨 |</div>
-                    <div className="content-about">
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
+                    <div className="content-products-item">
+                        <img className="products-img"></img>
+                        <div className="products-detail">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </div>
+                    </div>
+                    <div className="content-products-item">
+                        <img className="products-img"></img>
+                        <div className="products-detail">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </div>
                     </div>
                 </div>
+                <div className="content-head about">| 关于汇晨 |</div>
+                <div className="content-about">
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </div>
+            </div>
         );
     }
 }
