@@ -2,15 +2,17 @@
     /* margin-top: 60px; */
     /* background-color: lightslategrey; */
     width: 80%;
-    height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     padding-top: 30px;
+    color: dimgray !important;
+    text-decoration: none;
 }
 
 .content-head {
     font-size: 36px;
     font-weight: bold;
-    color: dimgray;
+    color: dimgray !important;
     text-align: center;
     letter-spacing: 10px;
 }
@@ -30,7 +32,14 @@
     border-radius: 200px;
     background-color: dimgrey;
 }
-
+.products-name {
+    font-size: 24px;
+    font-weight: bold;
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
 .products-detail {}
 
 .about{

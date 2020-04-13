@@ -18,7 +18,7 @@ import {
     Switch,
     // Link
 } from 'react-router-dom'
-const { Content } = Layout;
+const { Content, } = Layout;
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -39,9 +39,12 @@ class Index extends Component {
                             <Route path='/product' exact component={Product}></Route>
                             <Route path='/personal' exact component={Personal}></Route>
                             <Route path='/login' exact component={Login}></Route>
+                            <Route path='/sort' exact component={Login}></Route>
                         </Switch>
                     </Content>
                 </Layout>
+                {/* <Footer>123</Footer> */}
+                <div className="footer">123</div>
             </div>
         );
     }
