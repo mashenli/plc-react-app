@@ -13,7 +13,7 @@ class Home extends Component {
                 <img src={require('../../assets/img/banner.jpg')} className="carous"></img>
                 <div className="content-head">| 汇晨PLC |</div>
                 <div className="content-products">
-                    <Link to='/sort' key="123" style={{ textDecoration: 'none' }}>
+                    <Link to='/sort' key="123" style={{ textDecoration: 'none', color: '#696969' }}>
                         <div className="content-products-item">
                             <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
                             <div className="products-name">H7-200 SMART</div>
@@ -27,7 +27,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/sort' key="1" style={{ textDecoration: 'none' }}>
+                    <Link to='/sort' key="1" style={{ textDecoration: 'none', color: '#696969' }}>
                         <div className="content-products-item">
                             <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
                             <div className="products-name">H7-200</div>
@@ -41,7 +41,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/sort' key="12" style={{ textDecoration: 'none' }}>
+                    <Link to='/sort' key="12" style={{ textDecoration: 'none', color: '#696969' }}>
                         <div className="content-products-item">
                             <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
                             <div className="products-name">H7-300 SMART</div>
