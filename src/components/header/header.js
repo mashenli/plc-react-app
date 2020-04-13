@@ -5,7 +5,20 @@ import {
     Link,
     withRouter
 } from 'react-router-dom'
+import { setUserInfo } from '../../redux/actions/userInfo';
+import { connect } from 'react-redux';
+import store from '../../redux/store';
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        // console.log(this.props)
+    }
+    componentWillReceiveProps() {
+        console.log(this.props)
+    }
+    componentWillUpdate() {
+        console.log(this.props)
+    }
     render() {
         return (
             <div className="header">
@@ -31,11 +44,20 @@ class Header extends Component {
                         <div className="header-right-item">注册</div>
                     </Link>
                     <Link className="link" to="/login">
-                        <div className="header-right-item login">登录</div>
+                        <div className="header-right-item login">{store.getState().userInfo.userName ? store.getState().userInfo.userName:'登录'}</div>
                     </Link>
                 </div>
             </div>
         );
     }
 }
-export default withRouter(Header);
+const mapStateToProps = state => state;
+const mapDispatchToProps = dispatch => ({
+    setUserInfo: data => {
+        dispatch(setUserInfo(data));
+    }
+});
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header);

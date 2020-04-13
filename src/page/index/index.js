@@ -5,9 +5,13 @@ import Header from '../../components/header/header'
 import Home from '../home/home'
 import Collect from '../collect/collect'
 import Product from '../product/product'
-import Personal from '../personal/personal';
+import Personal from '../personal/personal'
+import Login from '../login/login'
+import { setUserInfo } from '../../redux/actions/userInfo';
+import { connect } from 'react-redux';
 import './index.css'
 import { Layout } from 'antd';
+import  store from '../../redux/store'
 import {
     // BrowserRouter as Router,
     Route,
@@ -16,6 +20,13 @@ import {
 } from 'react-router-dom'
 const { Content } = Layout;
 class Index extends Component {
+    constructor(props) {
+        super(props);
+        console.log(this.props)
+    }
+    componentWillReceiveProps(){
+        console.log(store.getState())
+    }
     render() {
         return (
             <div className="body">
@@ -27,6 +38,7 @@ class Index extends Component {
                             <Route path='/collect' exact component={Collect}></Route>
                             <Route path='/product' exact component={Product}></Route>
                             <Route path='/personal' exact component={Personal}></Route>
+                            <Route path='/login' exact component={Login}></Route>
                         </Switch>
                     </Content>
                 </Layout>
@@ -34,4 +46,13 @@ class Index extends Component {
         );
     }
 }
-export default Index;
+const mapStateToProps = state => state;
+const mapDispatchToProps = dispatch => ({
+	setUserInfo: data => {
+		dispatch(setUserInfo(data));
+	}
+});
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Index);
