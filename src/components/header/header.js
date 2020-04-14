@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import Header from '../../components/header'
 import './header.css'
+import '../../assets/bootstrap/css/bootstrap.css'
+import '../../assets/css/style.css'
 import {
     Link,
     withRouter
@@ -11,7 +13,6 @@ import store from '../../redux/store';
 class Header extends Component {
     constructor(props) {
         super(props);
-        // console.log(this.props)
     }
     componentWillReceiveProps() {
         console.log(this.props)
@@ -21,31 +22,121 @@ class Header extends Component {
     }
     render() {
         return (
-            <div className="header">
-                <div className="header-left">
-                    <div className="header-left-icon">HCUEEN</div>
-                    <div className="header-left-item">
-                        <Link className="link" to="/">
-                            <div className="menu">首页</div>
+            <div className="header text-center">
+                <div className="navbar navbar-expand-lg navbar-light navbar-custom">
+                    <div className="container">
+                        <Link className="navbar-brand" to="/">
+                            HCUEEN
                         </Link>
-                        <Link className="link" to="/product">
-                            <div className="menu">产品</div>
-                        </Link>
-                        <Link className="link" to="/collect">
-                            <div className="menu">收藏夹</div>
-                        </Link>
-                        <Link className="link" to="/personal">
-                            <div className="menu">个人中心</div>
-                        </Link>
+                        <div className="collapse navbar-collapse pull-xs-right justify-content-end" id="navbar-1">
+                            <ul className="navbar-nav mt-2 mt-md-0">
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/">首页</Link>
+                                </li>
+                                <li className="nav-item dropdown mega-menu">
+                                    <Link className="nav-link dropdown-toggle"
+                                        to="/product" id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        产品
+                                    </Link>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <div className="container">
+                                            <div className="divider"></div>
+                                            <div className="row">
+                                                <div className="col-md-4">
+                                                    <h6 className="text-uppercase">H7-200 SMART</h6>
+                                                    <ul className="nav flex-column">
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-md-4">
+                                                    <h6 className="text-uppercase">H7-200</h6>
+                                                    <ul className="nav flex-column">
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-md-4">
+                                                    <h6 className="text-uppercase">H7-300</h6>
+                                                    <ul className="nav flex-column">
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className="nav-item dropdown">
+                                    <Link className="nav-link dropdown-toggle"
+                                        to="/personal" id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        个人中心
+                                    </Link>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a className="dropdown-item" href="index.html">Homepage</a>
+                                        <div className="dropdown-divider"></div>
+                                        <a className="dropdown-item" href="catalog.html">Catalog</a>
+                                        <a className="dropdown-item" href="item.html">Item Detail</a>
+                                        <a className="dropdown-item" href="cart.html">Cart</a>
+                                        <div className="dropdown-divider"></div>
+                                        <a className="dropdown-item" href="contact.html">Contact</a></div>
+                                </li>
+                                <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+                                <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-shopping-cart"></i> <span className="badge badge-pill badge-primary">3</span></a>
+                                    <div className="dropdown-menu dropdown-menu-right dropdown-cart" aria-labelledby="navbarDropdown">
+                                        <h6>3 Items <span className="emphasis">$147.00</span></h6>
+                                        <div className="dropdown-divider"></div>
+                                        <ul className="shopping-cart-items">
+                                            <li className="row">
+                                                <div className="col-3">
+                                                    <img src="images/placeholder-product.jpg" width="60" />
+                                                </div>
+                                                <div className="col-9">
+                                                    <h6><a href="item.html">Product Name</a></h6>
+                                                    <span className="text-muted">1x</span>
+                                                    <span className="emphasis">$49.00</span></div>
+                                            </li>
+                                            <li className="row">
+                                                <div className="col-3">
+                                                    <img src="images/placeholder-product.jpg" width="60" />
+                                                </div>
+                                                <div className="col-9">
+                                                    <h6><a href="item.html">Product Name</a></h6>
+                                                    <span className="text-muted">1x</span>
+                                                    <span className="emphasis">$49.00</span></div>
+                                            </li>
+                                            <li className="row">
+                                                <div className="col-3">
+                                                    <img src="images/placeholder-product.jpg" width="60" />
+                                                </div>
+                                                <div className="col-9">
+                                                    <h6><a href="item.html">Product Name</a></h6>
+                                                    <span className="text-muted">1x</span>
+                                                    <span className="emphasis">$49.00</span></div>
+                                            </li>
+                                        </ul>
+
+                                        <a href="cart.html" className="btn btn-lg btn-full-width btn-primary">View Cart</a></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="header-right">
-                    <Link className="link" to="/register">
-                        <div className="header-right-item">注册</div>
-                    </Link>
-                    <Link className="link" to="/login">
-                        <div className="header-right-item login">{store.getState().userInfo.userName ? store.getState().userInfo.userName:'登录'}</div>
-                    </Link>
                 </div>
             </div>
         );

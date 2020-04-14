@@ -22,10 +22,8 @@ const { Content, } = Layout;
 class Index extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
     }
     componentWillReceiveProps(){
-        console.log(store.getState())
     }
     render() {
         return (
@@ -43,8 +41,6 @@ class Index extends Component {
                         </Switch>
                     </Content>
                 </Layout>
-                {/* <Footer>123</Footer> */}
-                <div className="footer">123</div>
             </div>
         );
     }
