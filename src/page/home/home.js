@@ -117,7 +117,7 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-200 SMART</h1>
                                         <p className="lead">Spring/Summer 2018 Collection</p>
-                                        <Link href="catalog.html" className="btn btn-outline-secondary">查看详情</Link>
+                                        <Link to="/product" className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-200</h1>
                                         <p className="lead">Spring/Summer 2018 Collection</p>
-                                        <Link href="catalog.html" className="btn btn-outline-white">查看详情</Link>
+                                        <Link to="product" className="btn btn-outline-white">查看详情</Link>
                                     </div>
                                 </div>
                             </div>
@@ -135,92 +135,92 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-300</h1>
                                         <p className="lead">Spring/Summer 2018 Collection</p>
-                                        <Link href="catalog.html" className="btn btn-outline-secondary">查看详情</Link>
+                                        <Link to="catalog.html" className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="featured-block text-center">
-                    <div class="container">
-                        <div class="row justify-center">
-                            <div class="col-md-6 text-center">
-                                <img class="mt-4 mb-4 img-fluid" src="images/placeholder-jacket.png" />
+                <div className="featured-block text-center">
+                    <div className="container">
+                        <div className="row justify-center">
+                            <div className="col-md-6 text-center">
+                                <img className="mt-4 mb-4 img-fluid" src="images/placeholder-jacket.png" />
                             </div>
-                            <div class="col-md-6 text-center text-md-left">
-                                <h2 class="mb-3">Spring/Summer Collection 2018</h2>
-                                <p class="lead mt-2 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
+                            <div className="col-md-6 text-center text-md-left">
+                                <h2 className="mb-3">Spring/Summer Collection 2018</h2>
+                                <p className="lead mt-2 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Suspendisse cursus erat sed sem sagittis cursus. Etiam porta sem malesuada magna mollis euismod.</p>
-                                <a href="#" class="btn btn-md btn-outline-primary mt-3">Shop Now</a>
+                                <a href="#" className="btn btn-md btn-outline-primary mt-3">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="products text-center">
-                    <div class="container">
-                        <h3 class="mb-4">Featured Products</h3>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3 col-product">
+                <div className="products text-center">
+                    <div className="container">
+                        <h3 className="mb-4">Featured Products</h3>
+                        <div className="row">
+                            <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img class="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
                                     <figcaption>
-                                        <div class="thumb-overlay">
+                                        <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
-                                                <i class="fas fa-search-plus"></i>
+                                                <i className="fas fa-search-plus"></i>
                                             </a>
                                         </div>
                                     </figcaption>
                                 </figure>
                                 <h4><a href="item.html">Product Name</a></h4>
-                                <p><span class="emphasis">$19.00</span></p>
+                                <p><span className="emphasis">$19.00</span></p>
                             </div>
-                            <div class="col-sm-6 col-md-3 col-product">
+                            <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img class="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
                                     <figcaption>
-                                        <div class="thumb-overlay">
+                                        <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
-                                                <i class="fas fa-search-plus"></i>
+                                                <i className="fas fa-search-plus"></i>
                                             </a>
                                         </div>
                                     </figcaption>
                                 </figure>
                                 <h4><a href="item.html">Product Name</a></h4>
-                                <p><span class="emphasis">$19.00</span></p>
+                                <p><span className="emphasis">$19.00</span></p>
                             </div>
-                            <div class="col-sm-6 col-md-3 col-product">
+                            <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img class="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
                                     <figcaption>
-                                        <div class="thumb-overlay">
+                                        <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
-                                                <i class="fas fa-search-plus"></i>
+                                                <i className="fas fa-search-plus"></i>
                                             </a>
                                         </div>
                                     </figcaption>
                                 </figure>
                                 <h4><a href="item.html">Product Name</a></h4>
-                                <p><span class="emphasis">$19.00</span></p>
+                                <p><span className="emphasis">$19.00</span></p>
                             </div>
-                            <div class="col-sm-6 col-md-3 col-product">
+                            <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img class="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
                                     <figcaption>
-                                        <div class="thumb-overlay">
+                                        <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
-                                                <i class="fas fa-search-plus"></i>
+                                                <i className="fas fa-search-plus"></i>
                                             </a>
                                         </div>
                                     </figcaption>
                                 </figure>
                                 <h4><a href="item.html">Product Name</a></h4>
-                                <p><span class="emphasis">$19.00</span></p>
+                                <p><span className="emphasis">$19.00</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="divider"></div>
+                <div className="divider"></div>
             </div>
         );
     }

@@ -4,25 +4,39 @@ import './header.css'
 import '../../assets/bootstrap/css/bootstrap.css'
 import '../../assets/css/style.css'
 import {
-    Link,
-    withRouter
+    Link
 } from 'react-router-dom'
 import { setUserInfo } from '../../redux/actions/userInfo';
 import { connect } from 'react-redux';
-import store from '../../redux/store';
+import { addTag } from '../../redux/actions/tagList';
+import $axios from '../../axios/$axios';
+// import tagList from '../../redux/reducers/tagList';
 class Header extends Component {
     constructor(props) {
         super(props);
+        // this.state = {
+        //     productSort: []
+        // }
     }
-    componentWillReceiveProps() {
-        console.log(this.props)
-    }
-    componentWillUpdate() {
-        console.log(this.props)
+    componentWillMount() {
+        let that = this
+        $axios({
+            url: '/api/admin/fetchClass',
+            method: 'get',
+            type: 'json'
+        }).then(data => {
+            let newData = Array.from(data.data)
+            this.props.addTag(newData);
+            this.setState({
+                productSort: newData
+            })
+        })
     }
     render() {
+        const { tagList } = this.props
+        const tags = tagList[0]
         return (
-            <div className="header text-center">
+            < div className="header text-center" >
                 <div className="navbar navbar-expand-lg navbar-light navbar-custom">
                     <div className="container">
                         <Link className="navbar-brand" to="/">
@@ -46,35 +60,26 @@ class Header extends Component {
                                         <div className="container">
                                             <div className="divider"></div>
                                             <div className="row">
-                                                <div className="col-md-4">
-                                                    <h6 className="text-uppercase">H7-200 SMART</h6>
-                                                    <ul className="nav flex-column">
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div className="col-md-4">
-                                                    <h6 className="text-uppercase">H7-200</h6>
-                                                    <ul className="nav flex-column">
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div className="col-md-4">
-                                                    <h6 className="text-uppercase">H7-300</h6>
-                                                    <ul className="nav flex-column">
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                        <li className="nav-item"><a className="nav-link" href="#">Link item</a></li>
-                                                    </ul>
-                                                </div>
+                                                {
+                                                    tags != undefined
+                                                        ? tags.map((item,key) => {
+                                                            return < div className="col-md-4"  key={key}>
+                                                                <h6 className="text-uppercase">{item.sort}</h6>
+                                                                <ul className="nav flex-column">
+                                                                    {
+                                                                        item.allClass.map((list,key) => {
+                                                                            return <li className="nav-item" key={key}>
+                                                                                <Link className="nav-link" to={{
+                                                                                    pathname: '/product',
+                                                                                    state: { sort: item.sort, class: list }
+                                                                                }}>{list}</Link></li>
+                                                                        })
+                                                                    }
+                                                                </ul>
+                                                            </div>
+                                                        })
+                                                        : null
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -134,11 +139,12 @@ class Header extends Component {
 
                                         <a href="cart.html" className="btn btn-lg btn-full-width btn-primary">View Cart</a></div>
                                 </li>
+                                <li className="nav-item"><Link className="nav-link" to="/login">登录</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
@@ -146,6 +152,9 @@ const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
     setUserInfo: data => {
         dispatch(setUserInfo(data));
+    },
+    addTag: data => {
+        dispatch(addTag(data));
     }
 });
 export default connect(

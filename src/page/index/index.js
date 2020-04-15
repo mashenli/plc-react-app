@@ -8,10 +8,12 @@ import Product from '../product/product'
 import Personal from '../personal/personal'
 import Login from '../login/login'
 import { setUserInfo } from '../../redux/actions/userInfo';
+import { addTag } from '../../redux/actions/tagList';
 import { connect } from 'react-redux';
 import './index.css'
 import { Layout } from 'antd';
-import  store from '../../redux/store'
+import store from '../../redux/store'
+import $axios from '../../axios/$axios';
 import {
     // BrowserRouter as Router,
     Route,
@@ -23,8 +25,17 @@ class Index extends Component {
     constructor(props) {
         super(props);
     }
-    componentWillReceiveProps(){
-    }
+    // componentDidMount() {
+    //     let that = this
+    //     $axios({
+    //         url: '/api/admin/fetchClass',
+    //         method: 'get',
+    //         type: 'json'
+    //     }).then(data => {
+    //         let newData = Array.from(data.data)
+    //         this.props.addTag(newData);
+    //     })
+    // }
     render() {
         return (
             <div className="body">
@@ -47,11 +58,14 @@ class Index extends Component {
 }
 const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
-	setUserInfo: data => {
-		dispatch(setUserInfo(data));
-	}
+    setUserInfo: data => {
+        dispatch(setUserInfo(data));
+    },
+    addTag: data => {
+        dispatch(addTag(data));
+    }
 });
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Index);
