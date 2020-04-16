@@ -18,7 +18,7 @@ class Home extends Component {
                         <li data-target="#carousel" data-slide-to="2"></li>
                     </ul>
                     <div className="carousel-inner">
-                        <div className="carousel-item active" style={{ background: require('../../assets/img/cover-bg-1.jpg')}}>
+                        <div className="carousel-item active" style={{ background: require('../../assets/img/cover-bg-1.jpg') }}>
                             <div className="container slide-textonly">
                                 <div>
                                     <h1>York &amp; Smith</h1>
@@ -58,7 +58,10 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-200 SMART</h1>
                                         <p className="lead">完美兼容，无需编程，即插即用，急速物联</p>
-                                        <Link to="/product" className="btn btn-outline-secondary">查看详情</Link>
+                                        <Link to={{
+                                            pathname: '/product',
+                                            state: { sort: 'H7-200 SMART' }
+                                        }} className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +70,11 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-200</h1>
                                         <p className="lead">IM 265扩展模块&&CP240串口模块</p>
-                                        <Link to="product" className="btn btn-outline-white">查看详情</Link>
+                                        <Link to={{
+                                            pathname: '/product',
+                                            state: { sort: 'H7-200' }
+                                        }}
+                                            className="btn btn-outline-white" > 查看详情</Link>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +83,10 @@ class Home extends Component {
                                     <div>
                                         <h1>H7-300</h1>
                                         <p className="lead">稳定、可靠、性价比极高</p>
-                                        <Link to="catalog.html" className="btn btn-outline-secondary">查看详情</Link>
+                                        <Link to={{
+                                            pathname: '/product',
+                                            state: { sort: 'H7-300' }
+                                        }} className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
                             </div>

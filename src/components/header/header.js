@@ -62,12 +62,12 @@ class Header extends Component {
                                             <div className="row">
                                                 {
                                                     tags != undefined
-                                                        ? tags.map((item,key) => {
-                                                            return < div className="col-md-4"  key={key}>
+                                                        ? tags.map((item, key) => {
+                                                            return < div className="col-md-4" key={key}>
                                                                 <h6 className="text-uppercase">{item.sort}</h6>
                                                                 <ul className="nav flex-column">
                                                                     {
-                                                                        item.allClass.map((list,key) => {
+                                                                        item.allClass.map((list, key) => {
                                                                             return <li className="nav-item" key={key}>
                                                                                 <Link className="nav-link" to={{
                                                                                     pathname: '/product',
@@ -103,7 +103,16 @@ class Header extends Component {
                                         <a className="dropdown-item" href="contact.html">Contact</a></div>
                                 </li>
                                 <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
-                                <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-shopping-cart"></i> <span className="badge badge-pill badge-primary">3</span></a>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown" role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <i className="fas fa-shopping-cart">购物车</i>
+                                        <span className="badge badge-pill badge-primary">3</span>
+                                    </a>
                                     <div className="dropdown-menu dropdown-menu-right dropdown-cart" aria-labelledby="navbarDropdown">
                                         <h6>3 Items <span className="emphasis">$147.00</span></h6>
                                         <div className="dropdown-divider"></div>
