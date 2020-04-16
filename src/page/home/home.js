@@ -10,65 +10,6 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
     render() {
         return (
-            // <div className="content">
-            //     <img src={require('../../assets/img/banner.jpg')} className="carous"></img>
-            //     <div>
-            //         <div className="content-head">| 汇晨PLC |</div>
-            //         <div className="content-products">
-            //             <Link to='/sort' key="123" style={{ textDecoration: 'none', color: '#696969' }}>
-            //                 <div className="content-products-item">
-            //                     <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
-            //                     <div className="products-name">H7-200 SMART</div>
-            //                     <div className="products-detail">
-            //                         <li>参数配置上位机下发，实际需要量程与模块配置灵活匹配</li>
-            //                         <li>数字量输入多档可配置滤波器，宽范围适应不同速度信号输入</li>
-            //                         <li>模拟量输入可配置滤波器，不占用CPU资源</li>
-            //                         <li>高速差分背板总线，强悍的抗干扰性能</li>
-            //                         <li>模块自带故障上报LED指示，现场问题一目了然</li>
-            //                         <li>更小体积，更高密度</li>
-            //                     </div>
-            //                 </div>
-            //             </Link>
-            //             <Link to='/sort' key="1" style={{ textDecoration: 'none', color: '#696969' }}>
-            //                 <div className="content-products-item">
-            //                     <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
-            //                     <div className="products-name">H7-200</div>
-            //                     <div className="products-detail">
-            //                         <li>参数配置上位机下发，实际需要量程与模块配置灵活匹配</li>
-            //                         <li>数字量输入多档可配置滤波器，宽范围适应不同速度信号输入</li>
-            //                         <li>模拟量输入可配置滤波器，不占用CPU资源</li>
-            //                         <li>高速差分背板总线，强悍的抗干扰性能</li>
-            //                         <li>模块自带故障上报LED指示，现场问题一目了然</li>
-            //                         <li>更小体积，更高密度</li>
-            //                     </div>
-            //                 </div>
-            //             </Link>
-            //             <Link to='/sort' key="12" style={{ textDecoration: 'none', color: '#696969' }}>
-            //                 <div className="content-products-item">
-            //                     <img className="products-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586795994465&di=7c98c718b564f79c50e5caab6aed5275&imgtype=0&src=http%3A%2F%2Fimage.kegongwang.com%2Fupload%2Fstore%2Fimage%2F20180730%2F201807301558068397.png"></img>
-            //                     <div className="products-name">H7-300 SMART</div>
-            //                     <div className="products-detail">
-            //                         <li>参数配置上位机下发，实际需要量程与模块配置灵活匹配</li>
-            //                         <li>数字量输入多档可配置滤波器，宽范围适应不同速度信号输入</li>
-            //                         <li>模拟量输入可配置滤波器，不占用CPU资源</li>
-            //                         <li>高速差分背板总线，强悍的抗干扰性能</li>
-            //                         <li>模块自带故障上报LED指示，现场问题一目了然</li>
-            //                         <li>更小体积，更高密度</li>
-            //                     </div>
-            //                 </div>
-            //             </Link>
-            //         </div>
-            //     </div>
-            //     <div className="about">
-            //         <div className="content-head">| 关于汇晨 |</div>
-            //         <div className="content-about">
-            //             <li>深圳市汇晨自动化技术有限公司专注于工业自动化产品的研发、生产、销售和技术服务</li>
-            //             <li>依托专业的研发队伍及多年的行业技术积累，为客户提供高质量、高性能、高竞争力的自动化产品及整体解决方案</li>
-
-            //         </div>
-            //     </div>
-
-            // </div>
             <div>
                 <div id="carousel" className="carousel slide" data-ride="carousel">
                     <ul className="carousel-indicators">
@@ -113,19 +54,19 @@ class Home extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="collection col-md-4 alt-background">
-                                <div className="container container-right text-center">
+                                <div className="container container-left text-center">
                                     <div>
                                         <h1>H7-200 SMART</h1>
-                                        <p className="lead">Spring/Summer 2018 Collection</p>
+                                        <p className="lead">完美兼容，无需编程，即插即用，急速物联</p>
                                         <Link to="/product" className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
                             </div>
                             <div className="collection col-md-4 bg-secondary inverted">
-                                <div className="container container-left text-center">
+                                <div className="container text-center">
                                     <div>
                                         <h1>H7-200</h1>
-                                        <p className="lead">Spring/Summer 2018 Collection</p>
+                                        <p className="lead">IM 265扩展模块&&CP240串口模块</p>
                                         <Link to="product" className="btn btn-outline-white">查看详情</Link>
                                     </div>
                                 </div>
@@ -134,7 +75,7 @@ class Home extends Component {
                                 <div className="container container-right text-center">
                                     <div>
                                         <h1>H7-300</h1>
-                                        <p className="lead">Spring/Summer 2018 Collection</p>
+                                        <p className="lead">稳定、可靠、性价比极高</p>
                                         <Link to="catalog.html" className="btn btn-outline-secondary">查看详情</Link>
                                     </div>
                                 </div>
@@ -144,12 +85,13 @@ class Home extends Component {
                 </div>
                 <div className="featured-block text-center">
                     <div className="container">
+                        <h2 className="mb-4">销量冠军</h2>
                         <div className="row justify-center">
                             <div className="col-md-6 text-center">
                                 <img className="mt-4 mb-4 img-fluid" src="images/placeholder-jacket.png" />
                             </div>
                             <div className="col-md-6 text-center text-md-left">
-                                <h2 className="mb-3">Spring/Summer Collection 2018</h2>
+                                <h3 className="mb-3">Spring/Summer Collection 2018</h3>
                                 <p className="lead mt-2 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Suspendisse cursus erat sed sem sagittis cursus. Etiam porta sem malesuada magna mollis euismod.</p>
                                 <a href="#" className="btn btn-md btn-outline-primary mt-3">Shop Now</a>
