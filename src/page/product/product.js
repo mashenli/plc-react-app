@@ -10,12 +10,16 @@ class Product extends Component {
             productList: []
         }
     }
-    fetchData() {
+    fetchData(value) {
+        let data = this.state.linkState
+        if (value) {
+            data = value
+        }
         $axios({
             url: '/api/fetch/product',
             method: 'post',
             type: 'json',
-            data: this.state.linkState
+            data: data
         }).then(data => {
             this.setState({
                 productList: data.data
@@ -26,10 +30,7 @@ class Product extends Component {
         this.fetchData()
     }
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            linkState: nextProps.location.state
-        })
-        this.fetchData()
+        this.fetchData(nextProps.location.state)
     }
     render() {
         return (
