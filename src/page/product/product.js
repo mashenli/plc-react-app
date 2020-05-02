@@ -50,7 +50,9 @@ class Product extends Component {
                                     </figure>
                                     <Link className="nav-link" to={{
                                         pathname: '/productDetail',
-                                        state: {}
+                                        state: {
+                                            goodsDetail:item
+                                        }
                                     }}>
                                         <h4 className="mb-1">{item.modular}</h4>
                                         <h4 className="mb-1">{item.sort}/{item.classId}</h4>

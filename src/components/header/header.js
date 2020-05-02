@@ -32,9 +32,29 @@ class Header extends Component {
             })
         })
     }
+    // fetchShop() {
+    //     $axios({
+    //         url: '/api/',
+    //         method: 'get',
+    //         type: 'json'
+    //     }).then(data => {
+    //         let newData = Array.from(data.data)
+    //         this.props.addTag(newData);
+    //         this.setState({
+    //             productSort: newData
+    //         })
+    //     })
+    // }
+    // componentWillReceiveProps(nextProps) {
+    //     console.log(nextProps.userInfo)
+    //     if (nextProps.userInfo != this.props.userInfo) {
+    //         this.fetchShop()
+    //     }
+    // }
     render() {
         const { tagList } = this.props
         const tags = tagList[0]
+        const { userInfo } = this.props
         return (
             < div className="header text-center" >
                 <div className="navbar navbar-expand-lg navbar-light navbar-custom">
@@ -84,26 +104,25 @@ class Header extends Component {
                                         </div>
                                     </div>
                                 </li>
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle"
+                                <li className="nav-item dropdown" style={{ display: userInfo.userName != undefined ? '' : 'none' }}>
+                                    <div className="nav-link dropdown-toggle"
                                         to="/personal" id="navbarDropdown"
                                         role="button"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
                                         个人中心
-                                    </Link>
+                                    </div>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a className="dropdown-item" href="index.html">Homepage</a>
+                                        <Link className="dropdown-item" to="personal_home">个人信息</Link>
                                         <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href="catalog.html">Catalog</a>
-                                        <a className="dropdown-item" href="item.html">Item Detail</a>
+                                        <Link className="dropdown-item" to="personal_password">修改密码</Link>
+                                        <Link className="dropdown-item" href="personal_view">查看订单</Link>
                                         <a className="dropdown-item" href="cart.html">Cart</a>
                                         <div className="dropdown-divider"></div>
-                                        <a className="dropdown-item" href="contact.html">Contact</a></div>
+                                    </div>
                                 </li>
-                                <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
-                                <li className="nav-item dropdown">
+                                <li className="nav-item dropdown" style={{ display: userInfo.userName != undefined ? 'none' : 'none' }}>
                                     <a className="nav-link dropdown-toggle"
                                         href="#"
                                         id="navbarDropdown" role="button"
@@ -148,7 +167,10 @@ class Header extends Component {
 
                                         <a href="cart.html" className="btn btn-lg btn-full-width btn-primary">View Cart</a></div>
                                 </li>
-                                <li className="nav-item"><Link className="nav-link" to="/login">登录</Link></li>
+                                <li className="nav-item"><Link className="nav-link" to="/login"> {
+                                    userInfo.userName != undefined ? userInfo.userName : '登录'
+                                }</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ import Header from '../../components/header/header'
 import Home from '../home/home'
 import Collect from '../collect/collect'
 import Product from '../product/product'
+import ProductDetail from '../productDetail/productDetail'
 import Personal from '../personal/personal'
 import Login from '../login/login'
 import { setUserInfo } from '../../redux/actions/userInfo';
@@ -46,6 +47,7 @@ class Index extends Component {
                             <Route path='/' exact component={Home}></Route>
                             <Route path='/collect' exact component={Collect}></Route>
                             <Route path='/product' exact component={Product}></Route>
+                            <Route path='/productDetail' exact component={ProductDetail}></Route>
                             <Route path='/personal' exact component={Personal}></Route>
                             <Route path='/login' exact component={Login}></Route>
                             <Route path='/sort' exact component={Login}></Route>
