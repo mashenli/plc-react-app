@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class PersonalHome extends Component {
+class PersonalView extends Component {
     render() {
         return (
             <div className="">
-              个人中心
+              查看订单
             </div>
         );
     }
 }
-export default PersonalHome;
+export default PersonalView;

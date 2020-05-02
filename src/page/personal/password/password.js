@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class PersonalHome extends Component {
+class PersonalPassword extends Component {
     render() {
         return (
             <div className="">
-              个人中心
+              修改密码
             </div>
         );
     }
 }
-export default PersonalHome;
+export default PersonalPassword;

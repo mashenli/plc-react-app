@@ -117,9 +117,7 @@ class Header extends Component {
                                         <Link className="dropdown-item" to="personal_home">个人信息</Link>
                                         <div className="dropdown-divider"></div>
                                         <Link className="dropdown-item" to="personal_password">修改密码</Link>
-                                        <Link className="dropdown-item" href="personal_view">查看订单</Link>
-                                        <a className="dropdown-item" href="cart.html">Cart</a>
-                                        <div className="dropdown-divider"></div>
+                                        <Link className="dropdown-item" to="personal_view">查看订单</Link>
                                     </div>
                                 </li>
                                 <li className="nav-item dropdown" style={{ display: userInfo.userName != undefined ? 'none' : 'none' }}>

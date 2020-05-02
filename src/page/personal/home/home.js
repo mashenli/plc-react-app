@@ -4,7 +4,7 @@ class PersonalHome extends Component {
     render() {
         return (
             <div className="">
-              个人中心
+              个人信息
             </div>
         );
     }
