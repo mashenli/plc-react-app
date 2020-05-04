@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Form, Icon, Input, Button, Layout, Menu } from 'antd';
+import { Carousel } from 'antd';
 // const { Header } = Layout
 // import Header from '../../components/header/header'
 // import Carous from '../../components/carous/carous'
@@ -11,14 +11,14 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div id="carousel" className="carousel slide" data-ride="carousel">
+                {/* <div id="carousel" className="carousel slide" data-ride="carousel">
                     <ul className="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" className="active"></li>
                         <li data-target="#carousel" data-slide-to="1"></li>
                         <li data-target="#carousel" data-slide-to="2"></li>
                     </ul>
                     <div className="carousel-inner">
-                        <div className="carousel-item active" style={{ background: require('../../assets/img/cover-bg-1.jpg') }}>
+                        <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
                             <div className="container slide-textonly">
                                 <div>
                                     <h1>York &amp; Smith</h1>
@@ -35,7 +35,7 @@ class Home extends Component {
                                     <a href="#" className="btn btn-outline-secondary">View Collection</a>
                                 </div>
                                 <div className="slide-image">
-                                    <img src="images/placeholder-shoes.png" style={{ width: `80%` }} />
+                                    <img src={require('../../assets/img/IMG_1694.JPG')} style={{ width: `80%` }} />
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,52 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <Carousel autoplay>
+                    <div className="carousel">
+                        <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
+                            <div className="container slide-textonly">
+                                <div className="left">
+                                    <img className="imgs img-fluid" src={require('../../assets/img/IMG_1694.JPG')} />
+                                </div>
+                                <div className="right">
+                                    <h1>SR 20</h1>
+                                    <p className="lead">完美兼容，无需编程，即插即用，急速物联/标准款CPU SR20，继电器</p>
+                                    <a href="#" className="btn btn-outline-secondary">查看产品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="carousel">
+                        <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
+                            <div className="container slide-textonly">
+                                <div className="left">
+                                    <img className="mt-4 mb-4 img-fluid" src={require('../../assets/img/IMG_1694.JPG')} />
+                                </div>
+                                <div className="right">
+                                    <h1>CPU224经济型</h1>
+                                    <p className="lead">汇晨H7-200 系列特有模块：IM265扩展 &amp; CP240串口模块</p>
+                                    <a href="#" className="btn btn-outline-secondary">查看相关产品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="carousel">
+                        <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
+                            <div className="container slide-textonly">
+                                <div className="left">
+                                    <img className="mt-4 mb-4 img-fluid" src={require('../../assets/img/IMG_1694.JPG')} />
+                                </div>
+                                <div className="right">
+                                    <h1>CPU224标准型</h1>
+                                    <p className="lead">完全兼容S7-300系列所有CPU及ET200M</p>
+                                    <a href="#" className="btn btn-outline-secondary">查看相关产品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </Carousel>
                 <div className="collections text-center ">
                     <div className="container-fluid">
                         <div className="row">
@@ -98,13 +143,13 @@ class Home extends Component {
                         <h2 className="mb-4">销量冠军</h2>
                         <div className="row justify-center">
                             <div className="col-md-6 text-center">
-                                <img className="mt-4 mb-4 img-fluid" src="images/placeholder-jacket.png" />
+                                <img className="mt-4 mb-4 img-fluid" src={require('../../assets/img/IMG_1694.JPG')} />
                             </div>
                             <div className="col-md-6 text-center text-md-left">
-                                <h3 className="mb-3">Spring/Summer Collection 2018</h3>
-                                <p className="lead mt-2 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Suspendisse cursus erat sed sem sagittis cursus. Etiam porta sem malesuada magna mollis euismod.</p>
-                                <a href="#" className="btn btn-md btn-outline-primary mt-3">Shop Now</a>
+                                <h3 className="mb-3">H7-200 SMART/SMART CPU/SR 20</h3>
+                                <p className="lead mt-2 mb-3">月销量：200</p>
+                                <p>标准款CPU SR 20,继电器</p>
+                                <a href="#" className="btn btn-md btn-outline-primary mt-4">购买</a>
                             </div>
                         </div>
                     </div>
@@ -115,7 +160,7 @@ class Home extends Component {
                         <div className="row">
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src={require('../../assets/img/IMG_1694.JPG')} width="240" height="240" />
                                     <figcaption>
                                         <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
@@ -129,7 +174,7 @@ class Home extends Component {
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src={require('../../assets/img/IMG_1694.JPG')} width="240" height="240" />
                                     <figcaption>
                                         <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
@@ -143,7 +188,7 @@ class Home extends Component {
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src={require('../../assets/img/IMG_1694.JPG')} width="240" height="240" />
                                     <figcaption>
                                         <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
@@ -157,7 +202,7 @@ class Home extends Component {
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
-                                    <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" width="240" height="240" />
+                                    <img className="rounded-corners img-fluid" src={require('../../assets/img/IMG_1694.JPG')} width="240" height="240" />
                                     <figcaption>
                                         <div className="thumb-overlay">
                                             <a href="item.html" title="More Info">
@@ -172,7 +217,6 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="divider"></div>
             </div>
         );
     }

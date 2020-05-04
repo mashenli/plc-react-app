@@ -9,12 +9,14 @@ import ProductDetail from '../productDetail/productDetail'
 import PersonalHome from '../personal/home/home'
 import PersonalPassword from '../personal/password/password'
 import PersonalView from '../personal/view/view'
+import Personal from '../personal/personal'
 import Login from '../login/login'
 import { setUserInfo } from '../../redux/actions/userInfo';
 import { addTag } from '../../redux/actions/tagList';
 import { connect } from 'react-redux';
 import './index.css'
 import { Layout } from 'antd';
+// import 'antd/dist/antd.css'
 import store from '../../redux/store'
 import $axios from '../../axios/$axios';
 import {
@@ -23,6 +25,7 @@ import {
     Switch,
     // Link
 } from 'react-router-dom'
+import Footer from '../../components/footer/footer';
 const { Content, } = Layout;
 class Index extends Component {
     constructor(props) {
@@ -53,11 +56,13 @@ class Index extends Component {
                             <Route path='/personal_home' exact component={PersonalHome}></Route>
                             <Route path='/personal_password' exact component={PersonalPassword}></Route>
                             <Route path='/personal_view' exact component={PersonalView}></Route>
+                            <Route path='/personal' exact component={Personal}></Route>
                             <Route path='/login' exact component={Login}></Route>
                             <Route path='/sort' exact component={Login}></Route>
                         </Switch>
                     </Content>
                 </Layout>
+                <Footer></Footer>
             </div>
         );
     }

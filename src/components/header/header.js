@@ -14,9 +14,10 @@ import $axios from '../../axios/$axios';
 class Header extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     productSort: []
-        // }
+        this.state = {
+            // productSort: [],
+            userInfo: props.userInfo != undefined ? props.userInfo : undefined
+        }
     }
     componentWillMount() {
         let that = this
@@ -32,29 +33,25 @@ class Header extends Component {
             })
         })
     }
-    // fetchShop() {
-    //     $axios({
-    //         url: '/api/',
-    //         method: 'get',
-    //         type: 'json'
-    //     }).then(data => {
-    //         let newData = Array.from(data.data)
-    //         this.props.addTag(newData);
-    //         this.setState({
-    //             productSort: newData
-    //         })
-    //     })
-    // }
-    // componentWillReceiveProps(nextProps) {
-    //     console.log(nextProps.userInfo)
-    //     if (nextProps.userInfo != this.props.userInfo) {
-    //         this.fetchShop()
-    //     }
-    // }
+    toOut() {
+        // console.log(this.state.userInfo)
+        this.setState({
+            userInfo: {}
+        })
+        // userInfo = undefined
+    }
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps.userInfo)
+        if (nextProps.userInfo != this.props.userInfo) {
+            this.setState({
+                userInfo: nextProps.userInfo
+            })
+        }
+    }
     render() {
         const { tagList } = this.props
         const tags = tagList[0]
-        const { userInfo } = this.props
+        // const { userInfo } = this.props
         return (
             < div className="header text-center" >
                 <div className="navbar navbar-expand-lg navbar-light navbar-custom">
@@ -104,23 +101,25 @@ class Header extends Component {
                                         </div>
                                     </div>
                                 </li>
-                                <li className="nav-item dropdown" style={{ display: userInfo.userName != undefined ? '' : 'none' }}>
+                                <li className="nav-item dropdown" style={{ display: this.state.userInfo.userName != undefined ? '' : 'none' }}>
                                     <div className="nav-link dropdown-toggle"
                                         to="/personal" id="navbarDropdown"
                                         role="button"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
-                                        个人中心
+                                        {this.state.userInfo.userName}
                                     </div>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <Link className="dropdown-item" to="personal_home">个人信息</Link>
                                         <div className="dropdown-divider"></div>
                                         <Link className="dropdown-item" to="personal_password">修改密码</Link>
                                         <Link className="dropdown-item" to="personal_view">查看订单</Link>
+                                        <div className="dropdown-divider"></div>
+                                        <div className="dropdown-item" onClick={this.toOut.bind(this)}>退出</div>
                                     </div>
                                 </li>
-                                <li className="nav-item dropdown" style={{ display: userInfo.userName != undefined ? 'none' : 'none' }}>
+                                <li className="nav-item dropdown" style={{ display: this.state.userInfo.userName != undefined ? 'none' : 'none' }}>
                                     <a className="nav-link dropdown-toggle"
                                         href="#"
                                         id="navbarDropdown" role="button"
@@ -165,9 +164,10 @@ class Header extends Component {
 
                                         <a href="cart.html" className="btn btn-lg btn-full-width btn-primary">View Cart</a></div>
                                 </li>
-                                <li className="nav-item"><Link className="nav-link" to="/login"> {
-                                    userInfo.userName != undefined ? userInfo.userName : '登录'
-                                }</Link>
+                                <li className="nav-item" style={{ display: this.state.userInfo.userName != undefined ? 'none' : '' }}>
+                                    <Link className="nav-link" to="/login"> {
+                                        this.state.userInfo.userName != undefined ? this.state.userInfo.userName : '登录'
+                                    }</Link>
                                 </li>
                             </ul>
                         </div>

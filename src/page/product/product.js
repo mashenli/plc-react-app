@@ -41,7 +41,7 @@ class Product extends Component {
                             this.state.productList.length > 0 ? this.state.productList.map((item, key) => {
                                 return <div className="col-md-6 col-lg-4 col-product" key={key}>
                                     <figure>
-                                        <img className="rounded-corners img-fluid" src="images/placeholder-product.jpg" />
+                                        <img className="rounded-corners img-fluid" src={require('../../assets/img/IMG_1694.JPG')} />
                                         <figcaption>
                                             <div className="thumb-overlay"><a href="item.html" title="More Info">
                                                 <i className="fas fa-search-plus"></i>
@@ -57,7 +57,7 @@ class Product extends Component {
                                         <h4 className="mb-1">{item.modular}</h4>
                                         <h4 className="mb-1">{item.sort}/{item.classId}</h4>
                                         <h4 className="mb-1">{item.describe}</h4>
-                                        <p><span className="emphasis">￥2000</span></p>
+                                <p><span className="emphasis">￥{item.price}</span></p>
                                     </Link>
                                 </div>
                             }) : null
