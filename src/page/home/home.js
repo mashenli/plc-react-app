@@ -11,45 +11,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                {/* <div id="carousel" className="carousel slide" data-ride="carousel">
-                    <ul className="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" className="active"></li>
-                        <li data-target="#carousel" data-slide-to="1"></li>
-                        <li data-target="#carousel" data-slide-to="2"></li>
-                    </ul>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
-                            <div className="container slide-textonly">
-                                <div>
-                                    <h1>York &amp; Smith</h1>
-                                    <p className="lead">Spring/Summer 2018 Collection</p>
-                                    <a href="#" className="btn btn-outline-secondary">View Collection</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <div className="container slide-withimage">
-                                <div className="description">
-                                    <h1>York &amp; Smith</h1>
-                                    <p className="lead">Spring/Summer 2018 Collection</p>
-                                    <a href="#" className="btn btn-outline-secondary">View Collection</a>
-                                </div>
-                                <div className="slide-image">
-                                    <img src={require('../../assets/img/IMG_1694.JPG')} style={{ width: `80%` }} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="carousel-item" style={{ backgroundImage: require('../../assets/img/cover-bg-2.jpg') }}>
-                            <div className="container slide-textonly">
-                                <div>
-                                    <h1>York &amp; Smith</h1>
-                                    <p className="lead">Spring/Summer 2018 Collection</p>
-                                    <a href="#" className="btn btn-outline-secondary">View Collection</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 <Carousel autoplay>
                     <div className="carousel">
                         <div className="carousel-item active" style={{ background: require('../../assets/img/IMG_1694.JPG') }}>
@@ -149,14 +110,16 @@ class Home extends Component {
                                 <h3 className="mb-3">H7-200 SMART/SMART CPU/SR 20</h3>
                                 <p className="lead mt-2 mb-3">月销量：200</p>
                                 <p>标准款CPU SR 20,继电器</p>
-                                <a href="#" className="btn btn-md btn-outline-primary mt-4">购买</a>
+                                <Link  className="btn btn-md btn-outline-primary mt-4" to={{
+                                    pathname: '/product',
+                                    state: { sort: 'H7-200' }}}> 购买</Link>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="products text-center">
                     <div className="container">
-                        <h3 className="mb-4">Featured Products</h3>
+                        <h3 className="mb-4">主流产品</h3>
                         <div className="row">
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
@@ -169,8 +132,8 @@ class Home extends Component {
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <h4><a href="item.html">Product Name</a></h4>
-                                <p><span className="emphasis">$19.00</span></p>
+                                <h4><a href="item.html">SR 20</a></h4>
+                                <p><span className="emphasis">$3980</span></p>
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
@@ -183,8 +146,8 @@ class Home extends Component {
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <h4><a href="item.html">Product Name</a></h4>
-                                <p><span className="emphasis">$19.00</span></p>
+                                <h4><a href="item.html">CPU224S14DI/10DO 24VDC</a></h4>
+                                <p><span className="emphasis">$2999</span></p>
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
@@ -197,8 +160,8 @@ class Home extends Component {
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <h4><a href="item.html">Product Name</a></h4>
-                                <p><span className="emphasis">$19.00</span></p>
+                                <h4><a href="item.html">ST 20</a></h4>
+                                <p><span className="emphasis">$2390</span></p>
                             </div>
                             <div className="col-sm-6 col-md-3 col-product">
                                 <figure>
@@ -211,8 +174,8 @@ class Home extends Component {
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <h4><a href="item.html">Product Name</a></h4>
-                                <p><span className="emphasis">$19.00</span></p>
+                                <h4><a href="item.html">EM DE16</a></h4>
+                                <p><span className="emphasis">$3529</span></p>
                             </div>
                         </div>
                     </div>

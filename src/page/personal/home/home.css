@@ -10,4 +10,29 @@
     /* width: 80%; */
     clear: both;
     background: #fff;
+    height: 718px;
+}
+.card{
+    margin:  1rem 10%;
+    border: #fff;
+    font-size: 16px;
+}
+.card_modify {
+    margin-top: 2rem;
+}
+.card_content__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    float: left;
+
+}
+.form{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card_content__item{
+    width: 30%;
 }
