@@ -34,7 +34,7 @@ class Product extends Component {
     }
     render() {
         return (
-            <div className="products">
+            <div className="products" style={{minHeight:'715px'}}>
                 <div className="container">
                     <div className="row">
                         {

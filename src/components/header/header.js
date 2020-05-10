@@ -103,7 +103,7 @@ class Header extends Component {
                                 </li>
                                 <li className="nav-item dropdown" style={{ display: this.state.userInfo.userName != undefined ? '' : 'none' }}>
                                     <div className="nav-link dropdown-toggle"
-                                        to="/personal" id="navbarDropdown"
+                                       id="navbarDropdown"
                                         role="button"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
